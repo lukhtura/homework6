@@ -2,14 +2,13 @@
 function Man(name, age, car) {
     this.name = name;
     this.age = age;
-    this.car = car;
-
 }
 
-function Car(brand, color, price) {
+function Car(brand, color, price, owner) {
     this.brand = brand;
     this.color = color;
     this.price = price;
+    this.owner = owner;
 }
 
 let man = new Man;
@@ -48,8 +47,8 @@ function initDataCar() {
 
     function getColorAndCheck() {
         car.color = prompt('Your car color:');
-        if (isNaN(Number(car.color)) === true) {
-            return car.color;
+        if (isNaN(Number(car.brand)) === true) {
+            return car.brand;
         }
     }
     getColorAndCheck();
@@ -66,7 +65,7 @@ function initDataCar() {
     console.log(car)
 }
 
-function carToMan() {
-    man.car = car
-    console.log(man)
+function manToCar() {
+    car.owner = man
+    console.log(car)
 }
