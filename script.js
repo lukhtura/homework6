@@ -1,18 +1,15 @@
 
-function Man(name, age, car) {
+function Man(name, age) {
     this.name = name;
     this.age = age;
-}
+};
 
 function Car(brand, color, price, owner) {
     this.brand = brand;
     this.color = color;
     this.price = price;
     this.owner = owner;
-}
-
-let man = new Man;
-let car = new Car;
+};
 
 function initDataMan() {
     function getNameAndCheck() {
@@ -62,10 +59,13 @@ function initDataCar() {
     }
     getPriceAndCheck();
 
-    console.log(car)
-}
+    function getOwner() {
+        car.owner = man;
+    };
+    getOwner()
 
-function manToCar() {
-    car.owner = man
     console.log(car)
-}
+};
+
+let man = new Man;
+let car = new Car;
